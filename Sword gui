@@ -1,1 +1,1 @@
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/clownisnothere/Sword-fighiting/main/Sword%20fighting%20real.lua"))()
