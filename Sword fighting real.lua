@@ -1,4 +1,22 @@
--- Gui to Lua
+local http_request = http_request;
+if syn then
+    http_request = syn.request
+end
+local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
+local decoded = game:GetService('HttpService'):JSONDecode(body)
+local hwid_list = {"Syn-Fingerprint", "Exploit-Guid"};
+for i, v in next, hwid_list do
+    if decoded.headers[v] then
+        hwid = decoded.headers[v];
+        break
+    end
+end
+if hwid then
+    API_KEY = "ZFaJrkAdHVWcf82NG5iO"; -- Set Public API Key
+    local auth = http_request({Url = 'https://yaris.rocks/access/?apikey='..API_KEY..'&hwid='..hwid; Method = 'GET'});
+    if auth.StatusCode == 200 then
+       print('User is Authorized');
+       -- Gui to Lua
 -- Version: 3.2
 
 -- Instances:
@@ -498,3 +516,7 @@ end)
 UICorner_8.Parent = TextButton
 
 UICorner_9.Parent = Frame
+    else 
+        print('User is Unauthorized');
+    end
+end
