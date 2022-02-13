@@ -12,7 +12,7 @@ for i, v in next, hwid_list do
     end
 end
 if hwid then
-    API_KEY = "QCWcYFsA8P7twgvT2LrV"; -- Set Public API Key
+    API_KEY = "vui2e5tlDzyJhgX03V1M"; -- Set Public API Key
     local auth = http_request({Url = 'https://yaris.rocks/access/?apikey='..API_KEY..'&hwid='..hwid; Method = 'GET'});
     if auth.StatusCode == 200 then
        print('User is Authorized');
