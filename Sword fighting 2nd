@@ -623,7 +623,7 @@ btns:Button("Spam", function()
 	-- This generator is IN DEVELOPMENT, not compatible with all types/classes yet
 
 	local args = {
-		[1] = "Instead of playing this game go out side and have a life",
+		[1] = "Instead of playing this game go out side and have a life y",
 		[2] = "All",
 	}
 
